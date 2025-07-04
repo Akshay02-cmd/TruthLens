@@ -29,9 +29,13 @@ def predict():
     # Transform and predict
     input_data = vectorizer.transform([news_text])
     prediction = model.predict(input_data)[0]
+    print("Prediction output:", prediction)  # Debug line
 
-    # Convert prediction to label
-    result = "✅ Likely Real News" if prediction == "REAL" else "⚠️ Warning: Likely Fake News"
+    # Fix label mapping
+    if prediction == 1:
+        result = "⚠️ Warning: Likely Fake News"
+    else:
+        result = "✅ Likely Real News"
 
     return render_template('index.html', prediction=result)
 
