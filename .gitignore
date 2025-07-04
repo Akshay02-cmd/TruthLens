@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.ipynb_checkpoints
+
+# Environment
+.env
+venv/
+env/
+ENV/
+*.env
+
+# OS & IDE specific
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs & cache
+*.log
+.cache/
+*.sqlite3
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Dataset files
+dataset/*.csv
+dataset/*.xlsx
+
+# Model files (optional to keep them private or large)
+model/*.pkl
+
+# Flask static files cache (if any)
+static/*.*~
